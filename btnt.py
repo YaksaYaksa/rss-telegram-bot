@@ -4,10 +4,11 @@ import time
 from datetime import datetime
 import re
 from requests.exceptions import RequestException
+import os
 
 # Настройки Telegram
-BOT_TOKEN = '8171472371:AAE6A9p-IS0ueuyfJc8b_JVkvjrEEekZmM8'
-CHAT_ID = '@generyai'
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8171472371:AAE6A9p-IS0ueuyfJc8b_JVkvjrEEekZmM8')  # Используем переменную окружения
+CHAT_ID = os.getenv('CHAT_ID', '@generyai')
 
 RSS_FEED_URLS = [
     'https://realt.onliner.by/feed',
